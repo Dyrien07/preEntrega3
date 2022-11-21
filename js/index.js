@@ -107,7 +107,10 @@ function recuperarDatosUsuario(storage){
     return JSON.parse(storage.getItem("usuario"));
 }
 
+
+
 function mostarCards(Productos){
+const carrito =[];
 cards.innerHTML="";
 Productos.forEach(element => {
     let html = `<div class="card" style="width; id="card${element.nombre}">
@@ -115,26 +118,22 @@ Productos.forEach(element => {
     <div class="card-body">
       <h5 class="card-title">${element.nombre}</h5>
       <p class="card-text">$${element.precio}</p>
-      <button class="btn btn-primary" id="btn${element.id}">Agregar al Carrito</button> 
+      <button class="btn btn-primary addcar" id="btn${element.id}" value="${element.id}">Agregar al Carrito</button> 
     </div>
   </div>`
   cards.innerHTML += html;
-  
-const btnAntiparras = document.getElementById("btn1");
-const btnAntiparras2 = document.getElementById("btn2");
-const btnClip = document.getElementById("btn3");
-const btnTapones = document.getElementById("btn4");
-const btnFog = document.getElementById("btn5");
-const carrito = [];
-btnAntiparras.addEventListener("click",(event)=>{
-    event.preventDefault();
-    carrito.push(productos[0]);
-    console.log(carrito);
-      
-    
-})
-
 });
+    const btns = document.querySelectorAll(".addcar");
+        console.log(btns);  
+    btns[0].addEventListener("click", (event) =>{
+        event.preventDefault;
+        carrito.push(productos[0]);
+        console.log(carrito)
+        
+    });    
+
+
+
 
 }
 function mostrarinfo(array, clase){
@@ -186,7 +185,7 @@ btnlogin.addEventListener("click", (event)=>{
 
 
 window.onload=() =>{
-    Logeado()
+    Logeado(recuperarDatosUsuario(localStorage));
    
 
 }
