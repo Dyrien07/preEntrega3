@@ -24,13 +24,17 @@
     
 }
 .card{
-    width: 400px;
-    margin: 20px;
     align-items: center;
-
+      width: 30%;
 }
 .card-img-top{
-width: 250px;
-align-items: center;
-margin: 100px;
+    width: 30%;
+    padding: 5%;
+    align-items: center;
+}
+.navbar{
+    margin-bottom: 100px;
+ 
+  
+   
 }
