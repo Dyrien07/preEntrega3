@@ -1,0 +1,36 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.formLogin{
+    
+    padding: 30px;
+}
+.logo{
+    padding-top: 300px;
+    width: 400px;
+}
+
+.cards{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    
+}
+.card{
+    width: 400px;
+    margin: 20px;
+    align-items: center;
+
+}
+.card-img-top{
+width: 250px;
+align-items: center;
+margin: 100px;
+}

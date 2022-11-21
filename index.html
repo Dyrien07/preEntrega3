@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda azul marino</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <img src="./assets/logoazulmarino.jpg" class="rounded logo togeable "  alt="Logo Azul marino">
+                  </div>
+                <form class="formLogin togeable">
+                    <div class="mb-3">
+                      <label for="usuario" class="form-label">Usuario</label>
+                      <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="pw" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="pw">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="chklogin">
+                      <label class="form-check-label" id="recordarme" for="chklogin">Recordarme</label>
+                    </div>
+                    <button type="submit" id="btnlogin" class="btn  btn-primary">Ingresar</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="cards" class="cards">
+
+    </div>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <script src="./js/index.js"></script>
+  </body>
+</html>

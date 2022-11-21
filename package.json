@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "toastify-js": "^1.12.0",
+    "toasty": "^6.0.3"
+  }
+}
