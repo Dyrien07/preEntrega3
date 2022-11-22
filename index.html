@@ -12,9 +12,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-lg bg-light togeable d-none">
+                <nav class="navbar navbar-expand-lg bg-light toggeable d-none">
                     <div class="container-fluid">
-                      <a class="navbar-brand" href="#"> <img src="./assets/logoazulmarino.jpg" class="rounded logo togeable "  alt="Logo Azul marino"><img></a>
+                      <a class="navbar-brand" href="#"> <img src="./assets/logoazulmarino.jpg" class="rounded logo toggeable d-none "  alt="Logo Azul marino"><img></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -35,9 +35,9 @@
                     </div>
                   </nav>
                 <div class="text-center">
-                    <img src="./assets/logoazulmarino.jpg" class="rounded logo togeable "  alt="Logo Azul marino">
+                    <img src="./assets/logoazulmarino.jpg" class="rounded logo toggeable "  alt="Logo Azul marino">
                   </div>
-                <form class="formLogin togeable">
+                <form class="formLogin toggeable">
                     <div class="mb-3">
                       <label for="usuario" class="form-label">Usuario</label>
                       <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp">
@@ -56,12 +56,24 @@
         </div>
     </div>
 
-    <div id="cards" class="cards">
-
-    <div id="carrito" class="togeable " >Carrito de Compras</div>
-
+    <div id="cards" class="cards"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row toggeable d-none" id="btnFin">
+                    <div class="col-12">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Button</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
+   
 
+ 
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

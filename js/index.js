@@ -44,12 +44,15 @@ const pwd = document.getElementById("pw");
 const recordarme = document.getElementById("recordarme");
 const btnlogin = document.getElementById("btnlogin");
 const cards = document.getElementById("cards");
-const elementosToggeables = document.querySelectorAll(".togeable");
+const elementosToggeables = document.querySelectorAll(".toggeable");
 const compras = document.getElementById("carrito");
+const btnFin = document.getElementById("btnFin"); 
+
+
+const carrito =[];
 
 function validarUsuario(user, pwd, datos){
     let encontrado = datos.find(datos=>datos.usuario === user);
-    console.log( "Encontrado: "+ encontrado.pwd);
     if(encontrado === undefined){
         Toastify({
             text:   "Credenciales Incorrectas",
@@ -110,7 +113,7 @@ function recuperarDatosUsuario(storage){
 
 
 function mostarCards(Productos){
-const carrito =[];
+
 cards.innerHTML="";
 Productos.forEach(element => {
     let html = `<div class="card" style="width; id="card${element.nombre}">
@@ -189,6 +192,50 @@ window.onload=() =>{
    
 
 }
+
+
+btnFin.addEventListener("click", async(event)=>{
+    event.preventDefault();
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Desea Terminar la comra?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+      }).then((result)=> {
+        
+        if (result.isConfirmed) {
+            let compraTotal = carrito.reduce((acc, item)=>{
+                return acc + item.precio;
+            }, 0);
+            
+          swalWithBootstrapButtons.fire(
+            'success',
+            'El total de su compra es '+ compraTotal,
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Siga Comprando :)',
+            'error'
+          )
+        }
+      })
+});
 
 
 
