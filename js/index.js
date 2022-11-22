@@ -133,7 +133,23 @@ Productos.forEach(element => {
         carrito.push(productos[0]);
         console.log(carrito)
         
-    });    
+    });
+    btns[1].addEventListener("click", (event) =>{
+        event.preventDefault();
+        carrito.push(productos[1])
+    });
+    btns[2].addEventListener("click", (event) =>{
+        event.preventDefault();
+        carrito.push(productos[2])
+    })
+    btns[3].addEventListener("click", (event) =>{
+        event.preventDefault();
+        carrito.push(productos[3])
+    });
+    btns[1].addEventListener("click", (event) =>{
+        event.preventDefault();
+        carrito.push(productos[4])
+    });
 
 
 
