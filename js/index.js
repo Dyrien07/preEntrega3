@@ -41,7 +41,7 @@ const productos =[{
 
 const usuario = document.getElementById("usuario");
 const pwd = document.getElementById("pw");
-const recordarme = document.getElementById("recordarme");
+const recordarme = document.getElementById("chklogin");
 const btnlogin = document.getElementById("btnlogin");
 const cards = document.getElementById("cards");
 const elementosToggeables = document.querySelectorAll(".toggeable");
@@ -187,9 +187,9 @@ btnlogin.addEventListener("click", (event)=>{
                     text: 'No hay registros'
                   })
             }else{
-                if(recordarme.cheked){
-                guardarDatos(data, localStorage)
-                saludar(recuperarDatosUsuario(data, localStorage));
+                if(recordarme.checked){
+                guardarDatos(data,localStorage)
+                saludar(recuperarDatosUsuario(localStorage));
                 }else{
                     guardarDatos(data,sessionStorage);
                     saludar(recuperarDatosUsuario(sessionStorage));
